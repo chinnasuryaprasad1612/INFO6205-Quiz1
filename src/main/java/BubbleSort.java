@@ -10,6 +10,21 @@ public class BubbleSort {
      */
     public void sort (Comparable[] a){
 //        write your code here.
+        int n=a.length;
+        boolean swappedFlag;
+       
+        for (int i = 0; i < n - 1; i++) {
+            swappedFlag = false;
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (a[j].compareTo(a[j + 1]) > 0) { 
+                    swap(a, j, j + 1);
+                    swappedFlag = true;
+                }
+            }
+            if (!swappedFlag) {
+                break;
+            }
+        }
 
     }
     /**
